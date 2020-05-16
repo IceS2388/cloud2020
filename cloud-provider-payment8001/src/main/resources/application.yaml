@@ -13,3 +13,8 @@ spring:
 mybatis:
  mapperLocations: classpath:mapper/*.xml
  type-aliases-package: com.atguigu.springcloud.entites #所有别名类所在的包
+
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:7001/eureka/

@@ -13,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 @Slf4j
 public class OrderController {
 
+    /*如何从eureka客户端中获取到服务信息？？？*/
     public static final String PAYMENT_URL="http://localhost:8001";
     @Autowired
     private RestTemplate restTemplate;

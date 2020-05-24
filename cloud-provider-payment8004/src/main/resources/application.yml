@@ -1,0 +1,19 @@
+server:
+  port: 8004
+spring:
+  cloud:
+    zookeeper:
+      connect-string: 192.168.2.115:2181
+  application:
+    name: cloud-payment-service
+  datasource: #与application是同一级别的。properties不容易出错。这个错误找了一天
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    url: jdbc:mysql://localhost:3306/db2020?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123321
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.atguigu.springcloud.entites #所有别名类所在的包
+

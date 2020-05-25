@@ -12,8 +12,11 @@
         <module name="cloud-provider-payment8004" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-provider-payment8001" />
+        <module name="cloud-consumerzk-order80" />
         <module name="cloud-consumer-order80" />
         <module name="cloud-api-common" />
+        <module name="cloud-providerconsul-payment8006" />
+        <module name="cloud-consumerconsul-order80" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

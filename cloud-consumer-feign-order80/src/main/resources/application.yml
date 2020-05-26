@@ -5,3 +5,6 @@ eureka:
     register-with-eureka: false
     serviceUrl:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7003.com:7003/eureka #集群版
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000

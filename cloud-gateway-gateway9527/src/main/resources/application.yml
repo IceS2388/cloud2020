@@ -18,7 +18,7 @@ spring:
           predicates:
             - Path=/payment/lb/**
             - After=2020-05-28T21:30:38.836+08:00[Asia/Shanghai]
-            - Cookie=username,zzyy
+            # - Cookie=username,zzyy
 
 eureka:
   instance:

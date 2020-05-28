@@ -18,7 +18,6 @@ public class OrderHystrixController {
     private PaymentHystrixService paymentHystrixService;
 
     @GetMapping("/consumer/payment/hystrix/ok/{id}")
-    @HystrixCommand
     public String paymentInfo_OK(@PathVariable("id") Integer id) {
         String result=paymentHystrixService.paymentInfo_OK(id);
         return  result;

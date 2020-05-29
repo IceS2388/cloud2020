@@ -1,5 +1,5 @@
 server:
-  port: 3355  #这里写了3355但是会从config-dev中读取那里的端口号，会覆盖此处的端口号。慎重慎重！！！
+  port: 3366  #这里写了3355但是会从config-dev中读取那里的端口号，会覆盖此处的端口号。慎重慎重！！！
 
 spring:
   application:

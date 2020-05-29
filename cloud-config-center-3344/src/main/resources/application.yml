@@ -13,8 +13,21 @@ spring:
       label: master
       username: 2388627880@qq.com
       password: 291498944github
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7003.com:7003/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
+
+

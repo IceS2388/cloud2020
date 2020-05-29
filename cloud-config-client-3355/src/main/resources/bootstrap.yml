@@ -1,0 +1,18 @@
+server:
+  port: 3355  #这里写了3355但是会从config-dev中读取那里的端口号，会覆盖此处的端口号。慎重慎重！！！
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      name: config
+      profile: dev
+      uri: http://config-3344.com:3344
+# bootstrap.yml是系统级别,具有最高优先级
+# application.yml是用户级别的资源配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7003.com:7003/eureka

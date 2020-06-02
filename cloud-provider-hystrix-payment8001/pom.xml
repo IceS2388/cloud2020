@@ -11,6 +11,7 @@
 
     <artifactId>cloud-provider-hystrix-payment8001</artifactId>
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>

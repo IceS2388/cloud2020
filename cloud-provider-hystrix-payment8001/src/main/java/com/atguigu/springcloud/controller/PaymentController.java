@@ -35,4 +35,5 @@ public class PaymentController {
     public String paymentCircuitBreaker(@PathVariable("id") Integer id){
         return paymentService.paymentCircuitBreaker(id);
     }
+
 }

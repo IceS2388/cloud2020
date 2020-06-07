@@ -24,4 +24,26 @@ public class FlowLimitController {
         log.info("------testB");
         return "------testB";
     }
+
+    @GetMapping("/testC")
+    public String testC(){
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        log.info("------testC");
+        return "------testC";
+    }
+
+    @GetMapping("/testD")
+    public String testD(){
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        log.info("------testD");
+        return "------testD";
+    }
 }

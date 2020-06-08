@@ -12,6 +12,14 @@ spring:
       transport:
         dashboard: localhost:8080
         port: 8719
+      datasource:
+        ds1:
+          nacos:
+            serverAddr: localhost:8848
+            dataId: cloudalibaba-sentinel-service
+            groupId: DEFAULT_GROUP
+            dataType: json
+            ruleType: flow
 
 management:
   endopoints:

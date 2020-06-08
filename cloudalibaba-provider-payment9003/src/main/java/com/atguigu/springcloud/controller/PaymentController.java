@@ -11,6 +11,7 @@ import java.util.HashMap;
 
 @RestController
 public class PaymentController {
+
     @Value("${server.port}")
     private String serverPort;
 
@@ -27,4 +28,6 @@ public class PaymentController {
         CommonResult<Payment> result=new CommonResult<>(200,"from mysql,serverPort:"+serverPort,payment);
         return result;
     }
+
+
 }

@@ -15,7 +15,7 @@ public class StorageController {
     private StorageService storageService;
 
     @RequestMapping("/storage/decrease")
-    public CommonResult decrease(@RequestParam Long productId,@RequestParam Integer count){
+    public CommonResult decrease(@RequestParam("productId") Long productId,@RequestParam("count") Integer count){
         storageService.decrease(productId,count);
         return new CommonResult(200,"扣减成功！");
     }

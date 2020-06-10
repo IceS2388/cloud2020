@@ -9,8 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
 @Slf4j
+@Service
 public class OrderServiceImpl implements OrderService {
 
     @Autowired
@@ -23,9 +23,9 @@ public class OrderServiceImpl implements OrderService {
     private AccountService accountService;
 
     @Override
-    public void crate(Order order) {
+    public void create(Order order) {
         log.info("---->开始新建订单:");
-        orderDao.crate(order);
+        orderDao.create(order);
 
         log.info("---->订单微服务开始调用库存，做扣减");
         storageService.decrease(order.getProductId(),order.getCount());

@@ -2,7 +2,6 @@ package com.atguigu.springcloud.service;
 
 import com.atguigu.springcloud.domain.CommonResult;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -10,5 +9,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface StorageService {
 
     @RequestMapping("/storage/decrease")
-     CommonResult decrease(@RequestParam Long productId,@RequestParam Integer count);
+     CommonResult decrease(@RequestParam("productId") Long productId,@RequestParam("count") Integer count);
 }

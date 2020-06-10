@@ -1,0 +1,48 @@
+server:
+  port: 2001
+
+spring:
+  application:
+    name: seata-order-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    alibaba:
+      seata:
+        tx-service-group: fsp_tx_group
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seata_order
+    username: root
+    password: 123321
+
+feign:
+  hystrix:
+    enabled: false
+
+loggin:
+  level:
+    io:
+      seata: info
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+#    sentinel:
+#      transport:
+#        dashboard: localhost:8080
+#        port: 8719
+#      datasource:
+#        ds1:
+#          nacos:
+#            serverAddr: localhost:8848
+#            dataId: cloudalibaba-sentinel-service
+#            groupId: DEFAULT_GROUP
+#            dataType: json
+#            ruleType: flow
+
+management:
+  endopoints:
+    web:
+      exposure:
+        include: '*'
